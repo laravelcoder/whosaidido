@@ -157,18 +157,26 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\LocalServiceProvider::class,
 
         //html from package
-        'Illuminate\Html\HtmlServiceProvider',
+        Illuminate\Html\HtmlServiceProvider::class,
         //Debugbar
         Barryvdh\Debugbar\ServiceProvider::class,
 
         //Image Intervention
-        'Intervention\Image\ImageServiceProvider',
+        Intervention\Image\ImageServiceProvider::class,
         yajra\Datatables\DatatablesServiceProvider::class,
         'Maatwebsite\Excel\ExcelServiceProvider',
         Barryvdh\DomPDF\ServiceProvider::class,
         'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+
+Collective\Html\HtmlServiceProvider::class,
+Laracasts\Flash\FlashServiceProvider::class,
+Prettus\Repository\Providers\RepositoryServiceProvider::class,
+\InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+\InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
+        
     ],
 
     /*
@@ -219,18 +227,21 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         //Form and html builder package.
-        'Form'      => 'Illuminate\Html\FormFacade',
-        'Html'      => 'Illuminate\Html\HtmlFacade',
-        //Laravel Debugbar
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        // 'Form'      => 'Illuminate\Html\FormFacade',
+        // 'Html'      => 'Illuminate\Html\HtmlFacade',
+ 
 
         //Image Intervention
-        'Image'     => 'Intervention\Image\Facades\Image',
+        'Image'     => Intervention\Image\Facades\Image::class,
         'Helpers'   => App\Http\Helpers\Helpers::class,
         'Datatables' => yajra\Datatables\Datatables::class,
         'Excel'     => 'Maatwebsite\Excel\Facades\Excel',
         'PDF'       => Barryvdh\DomPDF\Facade::class,
         'Cart'      => 'Gloudemans\Shoppingcart\Facades\Cart',
+
+'Form'      => Collective\Html\FormFacade::class,
+'Html'      => Collective\Html\HtmlFacade::class,
+'Flash'     => Laracasts\Flash\Flash::class,
 
     ],
 
