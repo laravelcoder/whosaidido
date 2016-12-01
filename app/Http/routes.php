@@ -1,5 +1,7 @@
 <?php
 
+include('dev_routes.php');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -323,8 +325,8 @@ Route::get('/home', 'HomeController@index');
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
-    Route::group(['prefix' => 'v1'], function () {
-        require config('infyom.laravel_generator.path.api_routes');
-    });
-});
+// Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
+//     Route::group(['prefix' => 'v1'], function () {
+//         require config('infyom.laravel_generator.path.api_routes');
+//     });
+// });

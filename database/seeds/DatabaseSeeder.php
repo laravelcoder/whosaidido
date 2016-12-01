@@ -28,10 +28,10 @@ class UserTableSeeder extends Seeder {
     {
         DB::table('users')->delete();
         \App\User::create([
-            'first_name'    => 'John',
-            'last_name'     => 'Doe',
-            'email'         => 'admin@demo.com',
-            'password'      => Hash::make('123456'),
+            'first_name'    => 'Phillip',
+            'last_name'     => 'Madsen',
+            'email'         => 'wecodelaravel@gmail.com',
+            'password'      => Hash::make('mad15696'),
             'user_type'      => 'super_admin',
             'active_status'      => 1,
         ]);
